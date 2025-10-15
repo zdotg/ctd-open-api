@@ -3,22 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Durham Weather App</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
-        <h1>Weather App</h1>
+        <h1>🌤️ Durham Weather</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="current-nav" class="active">Current Weather</a></li>
+                <li><a href="#" id="forecast-nav">7-Day Forecast</a></li>
+            </ul>
+        </nav>
     </header>
     
     <main>
-        <section id="weather-display">
-            <h2>Current Weather</h2>
+        <!-- DATA POINT 1: Current Weather -->
+        <section id="current-weather" class="weather-section active">
+            <h2>Current Conditions in Durham, NC</h2>
             <div id="weather-data">
-                <!-- Weather data will appear here -->
+                <div class="loading">Loading weather data...</div>
+            </div>
+        </section>
+        
+        <!-- DATA POINT 2: 7-Day Forecast -->
+        <section id="forecast-weather" class="weather-section">
+            <h2>7-Day Forecast</h2>
+            <div id="forecast-data">
+                <div class="loading">Loading forecast...</div>
             </div>
         </section>
     </main>
+    
+    <footer>
+        <p>Weather data provided by Open-Meteo API</p>
+    </footer>
+    
     <script src="js/index.js"></script>
 </body>
 </html>
